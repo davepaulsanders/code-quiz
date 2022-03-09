@@ -18,9 +18,10 @@ main {
 }
 
 h1 {
-    margin: 1rem;
+    margin: 2rem 1rem 1rem 1rem;
     font-size: 2rem;
     font-weight: bold;
+    text-align: center;
 }
 h2 {
     font-size: 1.25rem;
@@ -35,4 +36,15 @@ button {
     background: darkblue;
     color: white;
     border-radius: 7px;
+}
+button:hover {
+    background: blueviolet;
+}
+.question-ans-container {
+    display: flex;
+    flex-direction: column;
+    
+}
+.questionChoice {
+    margin: 0.5rem;
 }
