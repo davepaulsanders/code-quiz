@@ -2,7 +2,7 @@
 const timeDisplay = document.getElementById("time-display");
 const startButton = document.getElementById("start");
 let count = 0;
-timeDisplay.textContent = `Time: 0`;
+timeDisplay.textContent = `Time: ${count}`;
 
 const timer = () => {
   const gameTime = setInterval(function () {
