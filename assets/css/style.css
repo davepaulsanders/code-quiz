@@ -1,0 +1,38 @@
+body {
+    font-family: Roboto, serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: 1rem auto;
+}
+
+h1 {
+    margin: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.25rem;
+    margin: 1rem;
+    line-height: 1.5;
+    text-align: center;
+}
+button {
+    margin: 1rem;
+    font-size: 1rem;
+    padding: .75rem 2rem;
+    background: darkblue;
+    color: white;
+    border-radius: 7px;
+}
