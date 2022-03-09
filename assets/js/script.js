@@ -2,7 +2,7 @@
 const timeDisplay = document.getElementById("time-display");
 const startButton = document.getElementById("start");
 const siteTitle = document.getElementById("title");
-const questionText = document.getElementById("questions");
+var questionText = document.getElementById("questions");
 
 const quizQuestions = [
   ["Question 1", "a", "b", "c", "d", "c"],
@@ -14,25 +14,24 @@ let count = 0;
 timeDisplay.textContent = `Time: ${count}`;
 
 const startQuiz = () => {
+  timer();
   siteTitle.textContent = "";
-  for (let i = 0; i < quizQuestions.length; i++) {
-    questionText.textContent = quizQuestions[i][0];
-  }
+  questionText.textContent = quizQuestions[0][0];
 };
 const timer = () => {
   count = 75;
   timeDisplay.textContent = `Time: ${count}`;
   const gameTime = setInterval(function () {
     if (count === 0) {
+      questionText.textContent = "You lose!";
       clearInterval(gameTime);
-      return false;
+      return;
     }
     count--;
+
     timeDisplay.textContent = `Time: ${count}`;
-    //timeDisplay.textContent = `Time: ${count}`
   }, 1000);
 };
 startButton.addEventListener("click", function () {
   startQuiz();
-  timer();
 });
