@@ -1,3 +1,5 @@
+/* General Styling Start */
+
 body {
     font-family: Roboto, serif;
 }
@@ -30,7 +32,7 @@ h2 {
     text-align: center;
 }
 button {
-    margin: 1rem;
+    line-height: 1.5;
     font-size: 1rem;
     padding: .75rem 2rem;
     background: darkblue;
@@ -40,6 +42,20 @@ button {
 button:hover {
     background: blueviolet;
 }
+
+
+/* General Styling End */
+
+/* Header Styling Start */
+.high-scores:hover {
+    cursor: pointer;
+    color: blueviolet;
+}
+
+/* Header Styling End */
+
+/* Quiz Styling Start */
+
 .question-ans-container {
     display: flex;
     flex-direction: column;
@@ -48,3 +64,40 @@ button:hover {
 .questionChoice {
     margin: 0.5rem;
 }
+
+/* Quiz Styling End */
+
+/* Score Submit Styling Start */
+
+.initials-input {
+    margin: 1rem;
+    font-size: 1.25rem;
+    border-radius: 7px;
+    text-align: center;
+    padding: 0.25rem;
+}
+.submit {
+    
+    font-size: 1rem;
+    padding: .75rem 2rem;
+    background: darkblue;
+    color: white;
+    border-radius: 7px;
+}
+
+.submit:hover {
+    background: blueviolet;
+}
+
+/* Score Submit Styling End */
+
+/* Score Display Styling Start */
+.high-scores-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.list-item {
+    font-size: 1.25rem;
+}
+/* Score Display Styling End */
