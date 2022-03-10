@@ -182,6 +182,9 @@ const endGame = () => {
 };
 // Create score submission form
 const addYourScore = () => {
+  const showScore = document.createElement("p");
+  showScore.textContent = `Score: ${score}`;
+  questionText.appendChild(showScore);
   const endGameContainer = document.createElement("div");
   const endGameBox = document.createElement("form");
   endGameBox.setAttribute("method", "get");
