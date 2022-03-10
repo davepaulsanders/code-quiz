@@ -252,6 +252,7 @@ const displayScores = () => {
   highScoresTitle.textContent = "High Scores";
   highScoresTitle.className = "high-scores-title";
   const scoresList = document.createElement("ul");
+  scoresList.className = "scores-list";
   const items = JSON.parse(localStorage.getItem("players"));
   // highest scores at top
   items.sort((a, b) => {

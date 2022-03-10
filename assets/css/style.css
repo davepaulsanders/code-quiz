@@ -1,5 +1,10 @@
 /* General Styling Start */
 
+* {
+    --primaryColor: darkblue;
+    --secondaryColor: blueviolet;
+    --shadow: rgba(100, 100, 111, 0.2) 3px 3px 10px 0px;
+}
 body {
     font-family: Roboto, serif;
 }
@@ -17,8 +22,13 @@ main {
     align-items: center;
     width: 70%;
     margin: 1rem auto;
+    
 }
-
+@media screen and (min-width: 800px) {
+    main {
+        max-width: 50%;
+    } 
+}
 h1 {
     margin: 2rem 1rem 1rem 1rem;
     font-size: 2rem;
@@ -35,21 +45,27 @@ button {
     line-height: 1.5;
     font-size: 1rem;
     padding: .75rem 2rem;
-    background: darkblue;
+    background: var(--primaryColor);
     color: white;
     border-radius: 7px;
+    box-shadow: var(--shadow);
 }
 button:hover {
-    background: blueviolet;
+    background: var(--secondaryColor);
 }
 
-
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 /* General Styling End */
 
 /* Header Styling Start */
 .high-scores:hover {
     cursor: pointer;
-    color: blueviolet;
+    color: var(--secondaryColor);
 }
 
 /* Header Styling End */
@@ -75,18 +91,18 @@ button:hover {
     border-radius: 7px;
     text-align: center;
     padding: 0.25rem;
+    box-shadow: var(--shadow)
 }
-.submit {
-    
+.submit { 
     font-size: 1rem;
-    padding: .75rem 2rem;
-    background: darkblue;
+    padding: .9rem 2.75rem;
+    background: var(--primaryColor);
     color: white;
     border-radius: 7px;
-}
+    box-shadow: var(--shadow)
 
 .submit:hover {
-    background: blueviolet;
+    background: var(--secondaryColor);
 }
 
 /* Score Submit Styling End */
@@ -96,7 +112,16 @@ button:hover {
     font-size: 2rem;
     font-weight: bold;
 }
-
+.scores-list {
+    display: flex;
+    flex-direction: column;
+    border: 1px var(--primaryColor) solid;
+    padding: 1rem;
+    border-radius: 7px;
+    justify-content: center;
+    align-items: baseline;
+    box-shadow: var(--shadow);
+}
 .list-item {
     font-size: 1.25rem;
 }
