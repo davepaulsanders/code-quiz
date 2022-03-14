@@ -116,7 +116,6 @@ form {
 .scores-list {
     display: flex;
     flex-direction: column;
-    border: 1px var(--primaryColor) solid;
     padding: 1rem;
     border-radius: 7px;
     justify-content: center;
@@ -127,3 +126,25 @@ form {
     font-size: 1.25rem;
 }
 /* Score Display Styling End */
+.time-display {
+    animation: timerScare;
+    animation-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+.time-display-warning {
+    animation: timerScare;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+@keyframes timerScare {
+    0% {
+        transform: scale(1.5);
+        color: red;
+    }
+    100% {
+        transform: scale(1.0);
+        color: black;
+    }
+}
