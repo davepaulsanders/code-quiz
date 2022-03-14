@@ -60,6 +60,10 @@ form {
     justify-content: center;
     align-items: center;
 }
+
+input {
+    -webkit-appearance: none;
+}
 /* General Styling End */
 
 /* Header Styling Start */
