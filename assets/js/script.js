@@ -95,11 +95,13 @@ const timer = () => {
       return;
     }
 
-    if (count < 11) {
+    if (count < 12) {
       timeDisplay.className = "time-display-warning";
     }
     // If timer runs out
     if (count === 0) {
+      timeDisplay.className = "";
+      clearInterval(gameTime);
       endGame();
       return;
     }
@@ -181,7 +183,6 @@ const playerAnswer = (event) => {
 
 // What happens if game ends under any condition
 const endGame = () => {
-  timeDisplay.className = "";
   // get rid of choices
   for (let i = 0; i < 4; i++) {
     choiceArr[i].remove();
